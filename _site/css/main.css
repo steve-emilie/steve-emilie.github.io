@@ -300,3 +300,11 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: #222; }
+
+#about {
+  min-height: 100vh; }
+  #about #m_france {
+    min-height: 100vh; }
+  #about #m_chine {
+    min-height: 100vh;
+    background-color: #79b4f4; }

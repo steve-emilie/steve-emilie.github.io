@@ -36,9 +36,11 @@
 // variables.less
 $theme-primary: #7c79f4;
 $theme-dark: #222;
+//$theme-dark: #f47c79;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "mixins",
-        "base"
+"mixins",
+"base",
+"about"
 ;

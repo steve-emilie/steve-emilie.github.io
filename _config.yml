@@ -1,12 +1,12 @@
 # Site settings
-title: "Steve-Emilie Love Forever"
+title: "SNEILY"
 email: "steveemilieamour@gmail.com"
-description: "This is our house of love"
+description: "steve and emilie, I LOVE YOU"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 twitter_username:
-github_username: steve-emilie
+github_username: 
 
 # Build settings
 markdown: kramdown

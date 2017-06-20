@@ -307,10 +307,13 @@ body {
   #about #m_france {
     min-height: 100vh;
     background-color: #79b4f4; }
+    #about #m_france p {
+      height: 200px; }
     #about #m_france #arrow_down_france {
       float: right;
       font-size: 24px;
       margin-top: -70px;
+      margin-right: -20px;
       position: relative;
       webkit-animation-name: scrollDownFrance;
       /* Safari 4.0 - 8.0 */
@@ -324,10 +327,13 @@ body {
   #about #m_chine {
     min-height: 100vh;
     background-color: #f479b4; }
+    #about #m_chine p {
+      height: 200px; }
     #about #m_chine #arrow_down_chine {
       float: right;
       font-size: 24px;
       margin-top: -70px;
+      margin-right: -20px;
       position: relative;
       webkit-animation-name: scrollDownChine;
       /* Safari 4.0 - 8.0 */

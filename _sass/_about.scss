@@ -3,11 +3,15 @@
 	#m_france{
 		min-height: 100vh;
 		background-color:#79b4f4;
+		p{
+			height:200px;
+		}
 
 		#arrow_down_france{
 			float:right;
 			font-size:24px;
 			margin-top:-70px;
+			margin-right:-20px;
 			position: relative;
 			webkit-animation-name: scrollDownFrance; /* Safari 4.0 - 8.0 */
 		    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
@@ -20,11 +24,15 @@
 	#m_chine{
 		min-height: 100vh;
 		background-color:#f479b4;
-		
+
+		p{
+			height:200px;
+		}		
 		#arrow_down_chine{
 			float:right;
 			font-size:24px;
 			margin-top:-70px;
+			margin-right:-20px;
 			position: relative;
 			webkit-animation-name: scrollDownChine; /* Safari 4.0 - 8.0 */
 		    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */

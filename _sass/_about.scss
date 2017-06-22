@@ -1,79 +1,26 @@
 #about{
-	height: 100vh;
+	min-height: 100vh;
 	#m_france{
-		min-height: 100vh;
-		background-color:#edc6fb;
+		background-color:#c6d4fb;
+		padding-bottom:20px;
 		p{
-			color:#c6fbed;
-			height:200px;
+			color:#8D5427;
 		}
-
-		#arrow_down_france{
-			float:right;
-			font-size:24px;
-			margin-top:-70px;
-			margin-right:-20px;
-			position: relative;
-			webkit-animation-name: scrollDownFrance; /* Safari 4.0 - 8.0 */
-		    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-		    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-		    animation-name: scrollDownFrance;
-		    animation-duration: 1s;
-		    animation-iteration-count: infinite;
+		.btn{
+			font-weight:700;
+			font-size:15px;
 		}
 	}
 	#m_chine{
-		min-height: 100vh;
-		background-color:#fbedc6;
-
+		background-color:#ffd5b7;
+		padding-bottom:20px;
 		p{
-			color:#c6d4fb;
-			height:200px;
+			//color:#4D0477;
+			color:#5951CD;
 		}		
-		#arrow_down_chine{
-			float:right;
-			font-size:24px;
-			margin-top:-70px;
-			margin-right:-20px;
-			position: relative;
-			webkit-animation-name: scrollDownChine; /* Safari 4.0 - 8.0 */
-		    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-		    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-		    animation-name: scrollDownChine;
-		    animation-duration: 1s;
-		    animation-iteration-count: infinite;
+		.btn{
+			font-weight:700;
+			font-size:15px;
 		}
 	}
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes scrollDownChine {
-    0%   {left:0px; top:0px;}
-    25%  {left:0px; top:5px;}
-    75%  {left:0px; top:10px;}
-    100% {left:0px; top:15px;}
-}
-
-/* Standard syntax */
-@keyframes scrollDownChine {
-    0%   {left:0px; top:0px;}
-    25%  {left:0px; top:5px;}
-    75%  {left:0px; top:10px;}
-    100% {left:0px; top:15px;}
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes scrollDownFrance {
-    0%   {left:0px; top:0px;}
-    25%  {left:0px; top:5px;}
-    75%  {left:0px; top:10px;}
-    100% {left:0px; top:15px;}
-}
-
-/* Standard syntax */
-@keyframes scrollDownFrance {
-    0%   {left:0px; top:0px;}
-    25%  {left:0px; top:5px;}
-    75%  {left:0px; top:10px;}
-    100% {left:0px; top:15px;}
 }

@@ -305,6 +305,7 @@ body {
 #about {
   min-height: 100vh; }
   #about #m_france {
+    min-height: 100vh;
     background-color: #c6d4fb;
     padding-bottom: 20px; }
     #about #m_france p {
@@ -313,6 +314,7 @@ body {
       font-weight: 700;
       font-size: 15px; }
   #about #m_chine {
+    min-height: 100vh;
     background-color: #ffd5b7;
     padding-bottom: 20px; }
     #about #m_chine p {

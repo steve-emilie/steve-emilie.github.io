@@ -36,7 +36,7 @@
 
 
 <body id="page-top">
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -71,7 +71,7 @@
     <!-- /.container-fluid -->
 </nav>
 
-  <header>
+	<header>
     <div class="header-content">
         <div class="header-content-inner">
             <h1>How sweet it is to be loved by you!</h1>
@@ -95,9 +95,9 @@
     </div>
 </header>
 
-  <section class="no-padding" id="about">
+	<section class="no-padding" id="about">
     <!-- <div class="container"> -->
-    <div class="row" style="display:flex">
+    <div class="" style="display:flex">
 
 
         <div class="col-md-6" id="m_france">
@@ -135,7 +135,7 @@
     </div>
 </section>
 
-  <section id="services">
+	<section id="services">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -146,39 +146,96 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                    <h3>Sturdy Templates</h3>
-                    <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+            <div class="col-lg-4 col-md-4 text-center" style="margin-top:100px">
+                <div class="service-box" >
+                    <i class="fa fa-4x fa-male wow bounceIn text-primary" data-wow-delay=".5s"></i>
+                    <h3 class="typewrite" data-period="2000" data-type='[ "Hi, Im Steve.", "I am a boy.", "I Love Design.", "I Love to Develop." ]'><span class="wrap"></span></h3>
+                    <p class="text-muted" data-wow-delay=".5s">Our templates are updated regularly so they don't break.</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h3>Ready to Ship</h3>
+            <div class="col-lg-4 col-md-4 text-center">
+                <div class="service-box" style="margin-bottom:50px">
+                    <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".5s"></i>
+                    <h3 class="typewrite" data-period="2000" data-type='[ "Hi, Girl.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'><span class="wrap"></span></h3>
                     <p class="text-muted">You can use this theme as is, or you can make changes!</p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                    <h3>Up to Date</h3>
+                    <i class="fa fa-4x fa-home wow bounceIn text-primary" data-wow-delay=".5s"></i>
+                    <h3 class="typewrite" data-period="2000" data-type='[ "Hi, Girl.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'><span class="wrap"></span></h3>
                     <p class="text-muted">We update dependencies to keep things fresh.</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-4 text-center" style="margin-top:100px">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                    <h3>Made with Love</h3>
+                    <i class="fa fa-4x fa-female wow bounceIn text-primary" data-wow-delay=".5s"></i>
+                    <h3 class="typewrite" data-period="2000" data-type='[ "Hi, Girl.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'><span class="wrap"></span></h3>
                     <p class="text-muted">You have to make your websites with love these days!</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<script type="text/javascript">
+//made by vipul mirajkar thevipulm.appspot.com
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
 
-  <section class="no-padding" id="portfolio">
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function() {
+        that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+  }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+    </script>
+
+	<section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
             <div class="col-lg-4 col-sm-6">
@@ -271,31 +328,68 @@
                     </div>
                 </a>
             </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="img/portfolio/7.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="img/portfolio/8.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="img/portfolio/9.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
-    <aside class="bg-dark">
-      <div class="container text-center">
-          <div class="call-to-action">
-              <h2>Free Download at Start Bootstrap!</h2>
-              <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-          </div>
-      </div>
-  </aside>
-
-  <section id="contact">
+	<section id="contact">
     <div class="container">
         <div class="row">
+
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
+                <h2 class="section-heading">Contact Us!</h2>
                 <hr class="primary">
                 <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
             </div>
             <div class="col-lg-2 col-lg-offset-2 text-center">
                 <a href="https://twitter.com/">
-                    <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <!-- <p></p> -->
+                    <i class="fa fa-weixin fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p>emilie-jin</p>
                 </a>
             </div>
             <div class="col-lg-2 col-lg-offset-1 text-center">
@@ -306,15 +400,15 @@
             </div>
             <div class="col-lg-2 col-lg-offset-1 text-center">
                 <a href="https://github.com/">
-                    <i class="fa fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <!-- <p></p> -->
+                    <i class="fa fa-weibo fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p>小竹子正能量</p>
                 </a>
             </div>
 
         </div>
     </section>
 
-  <!-- jQuery -->
+	<!-- jQuery -->
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
